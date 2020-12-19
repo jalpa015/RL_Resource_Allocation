@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\pjalp\Desktop\Fall 2020\COMP 8590 - Machine Learning and Optimisation\RL Resource Allocation Project\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+.idea
+data/container_meta.tar.gz
+data/machine_usage.tar.gz
+data/machine_meta.tar.gz
