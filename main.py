@@ -1,16 +1,28 @@
-# This is a sample Python script.
+import os
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import numpy as np
+from tqdm import tqdm
 
+from data_methods import Env
+from models import *
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    models = [
+        BiCNet(n_actions=10, n_features=2, hidsizes='128,64')
+    ]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    for model in models:
+        actions = []
+        done = False
+        obs = Env.reset(model.local_model, model.predictor)
+        tqdm.write(f'running {model.name}')
+
+        for _ in tqdm(range(2)):
+            action = int(model.step(obs))
+            actions.append(action)
+            _, _, done, info = Env.step(action)
+
+        power_usage, latency = info
+        actions = np.bincount(actions, minlength=10)
+
+        np.savetxt(os.path.join('logs', 'debug', f'rl_power.txt'), power_usage)
