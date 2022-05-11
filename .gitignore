@@ -11,4 +11,6 @@ data/container_meta.tar.gz
 data/machine_usage.tar.gz
 data/machine_meta.tar.gz
 
+/weights
+
 .ipynb_checkpoints
