@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#C:/Users/pjalp/Desktop/Master of Science/Fall 2020/COMP 8590 - Machine Learning and Optimisation/RL Resource Allocation Project/data_methods.py</OriginalElement>
+  <nodes>
+    <node x="498.0" y="612.0">data_methods.Task</node>
+    <node x="882.0" y="546.0">data_methods.Env</node>
+    <node x="0.0" y="568.0">data_methods.Machine</node>
+    <node x="563.0" y="-3.0">object</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="data_methods.Machine" target="object" relationship="REALIZATION">
+      <point x="239.0" y="-78.5" />
+      <point x="680.0" y="594.5" />
+      <point x="0.0" y="248.0" />
+    </edge>
+    <edge source="data_methods.Env" target="object" relationship="REALIZATION">
+      <point x="-105.5" y="-78.5" />
+      <point x="680.0" y="594.5" />
+      <point x="0.0" y="248.0" />
+    </edge>
+    <edge source="data_methods.Task" target="object" relationship="REALIZATION">
+      <point x="0.0" y="-61.0" />
+      <point x="0.0" y="248.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="700.0" y="309.0" />
+  <SelectedNodes>
+    <node>object</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+</Diagram>
+

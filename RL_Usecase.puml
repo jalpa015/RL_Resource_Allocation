@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+usecase Input as "Input task
+and Machine data"
+User -> Input
+
+actor "Neural Network Model" as fc
+Input --> fc
+rectangle Model {
+  usecase "Data Pre-processing" as UC1
+  usecase "Predict No. of instances" as UC2
+  usecase "Display No. of instances" as UC3
+}
+fc --> UC1 :1
+
+fc --> UC2 :2
+fc --> UC3 :3
+
+
+note bottom of UC1
+Preprocess the data
+in input format
+end note
+
+@enduml

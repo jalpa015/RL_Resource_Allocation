@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+usecase Company as "Input
+user tasks
+and Company
+resources data"
+
+Cloud_Service_Provider --> Company
+
+actor "Neural Network Model" as fc
+Company --> fc
+rectangle Model {
+  usecase "Data Pre-processing" as UC1
+  usecase "Predict No. of instances \n for each user tasks" as UC2
+  usecase "Display No. \nof instances \n per user in \n time interval" as UC3
+}
+fc --> UC1 :1
+
+fc --> UC2 :2
+fc --> UC3  :3
+
+
+note bottom of UC1
+Preprocess the data
+in input format
+end note
+@enduml

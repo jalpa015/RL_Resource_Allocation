@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Input -> Data_Processing: Input Cloud Cluster Data for Data Preprocessing
+Data_Processing -> Neural_Network_Model: Input the processed data to Neural Network model
+Neural_Network_Model -> Output: Train the neural network on the input Cloud Cluster Data
+Output --> Neural_Network_Model: Training Predictions of Cloud resource allocation
+Output --> Neural_Network_Model: Return training errors and model accuracy
+Data_Processing -> Neural_Network_Model: Input the test data to Neural Network model
+Neural_Network_Model -> Output: Compute Test data Predictions
+Output --> Neural_Network_Model: Predict number of Resources allocated for Test Data
+Output --> Neural_Network_Model: Generate Accuracy plot
+@enduml
